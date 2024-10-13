@@ -25,7 +25,6 @@ li.todo-item {
   padding: 15px 10px;
   border-bottom: 1px solid lightgray;
   font-weight: 200;
-  color: ;
 }
 
 .item {
@@ -64,4 +63,18 @@ h1 {
   border: 1px solid gray;
   border-radius: 2px;
   cursor: pointer;
+}
+
+
+#clear{
+  background-color: transparent;
+  font-size: 24px;
+  color: rgb(229, 64, 64);
+  border: 0px;
+  cursor: pointer;
+}
+
+main > div {
+  display:flex ;
+  justify-content: space-between;
 }

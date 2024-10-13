@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="app.js" defer></script>
+  <script src="./app.js" defer></script>
 </head>
 
 <body>
   <main class="todo-app">
-    <h1>TODO
-      <button @click="todos = []">清空</button>
-    </h1>
+    <div>
+      <h1>TODO</h1>
+      <button @click="todos = []" id="clear">清空</button>
+    </div>
     <div class="taskSection">
       <input type="text" id="taskInput" v-model.trim="task" @keyup.enter="addTask">
       <button id="addBtn" @click="addTask">新增</button>

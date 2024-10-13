@@ -15,16 +15,17 @@ const dataObject = {
       todos: [],
     }
   },
+  // 使用 mounted 時，初始化 todos 需要檢查： 在 mounted 中檢查是否有存在的 STORAGE_NAME，避免 this.todos 賦值為 null
   mounted() {
-    const todos = JSON.parse(localStorage.getItem(STORAGE_NAME))
+    const todos = JSON.parse(localStorage.getItem(STORAGE_NAME)) || [];
     this.todos = todos;
   },
   methods: {
     addTask() {
       if (this.task != "") {
-        const t = { id: crypto.randomUUID(), task: this.task }
-        // console.log(t);
-
+        const t = { id: crypto.randomUUID(), task: this.task };
+        console.log(t);
+        
         this.todos.unshift(t);
         this.task = "";
 
